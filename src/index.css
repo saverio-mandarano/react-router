@@ -10,3 +10,9 @@
   flex-direction: row;
   gap: 2rem;
 }
+
+.active {
+  background-color: blue;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
