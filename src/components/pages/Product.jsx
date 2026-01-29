@@ -1,9 +1,9 @@
-import NavBar from "../Layout";
+// import NavBar from "../NavBar";
 
 function Product() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <h2>Product contenuto:</h2>;
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit

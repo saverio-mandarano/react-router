@@ -1,9 +1,9 @@
-import NavBar from "../Layout";
+// import NavBar from "../NavBar";
 
 function HomePage() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <h2>HomePages contenuto:</h2>;
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit

@@ -1,9 +1,9 @@
-import NavBar from "../Layout";
+// import NavBar from "../NavBar";
 
 function AboutUs() {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <h2>About us contenuto:</h2>;
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
