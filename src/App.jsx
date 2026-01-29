@@ -7,7 +7,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Product from "./components/pages/Product";
 
 //import del layout di riferimento
-import DefaultLayout from "./components/layouts/DefaultLayouts";
+import DefaultLayout from "./components/layouts/DefaultLayout";
 
 function App() {
   return (
