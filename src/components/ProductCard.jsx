@@ -1,17 +1,17 @@
 function ProductCard({ productProp }) {
   return (
     <div className="card">
-      <span className="pt-3 actress-title">
+      <span className="pt-3 product-title">
         {productProp.title.toUpperCase()}
       </span>
-      <div className="actress-img px-3 pb-1 pt-4 d-flex align-items-center justify-content-center ">
+      <div className="product-img px-3 pb-1 pt-4 d-flex align-items-center justify-content-center ">
         <img src={productProp.image} alt={productProp.title} />
       </div>
-      <div className="actress-info px-4 pb-5">
-        <p className="actress-birth-year actress-nationality">
-          {productProp.category} {productProp.price}
+      <div className="product-info px-4 pb-5">
+        <p className="product-price">
+          {productProp.category} - &#x20AC; {productProp.price}
         </p>
-        <p className="actress-biography">{productProp.description}</p>
+        <p className="product-description">{productProp.description}</p>
       </div>
     </div>
   );

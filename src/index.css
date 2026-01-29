@@ -16,3 +16,38 @@
   border-radius: 8px;
   padding: 5px 10px;
 }
+
+/* cards layout */
+.card-container {
+  gap: 20px;
+}
+
+.card {
+  width: calc(100% / 3 - (60px / 3));
+  background-color: rgb(246, 246, 246);
+  color: black;
+  text-align: center;
+}
+
+.product-img img {
+  width: 50%;
+  height: 220px;
+}
+
+/* product-info layout */
+.product-price {
+  font-style: italic;
+  margin-top: 1rem;
+  font-family: bold;
+  color: red;
+  font-size: 1.3rem;
+}
+
+.product-name {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.product-title {
+  font-weight: 800;
+}
