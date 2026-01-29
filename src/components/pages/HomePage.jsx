@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <>
       {/* <NavBar /> */}
-      <h2>HomePages contenuto:</h2>;
+      <h2>HomePages contenuto:</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
         consectetur fuga maxime sint incidunt dolore asperiores quos quod? Et

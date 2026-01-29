@@ -4,7 +4,7 @@ function Product() {
   return (
     <>
       {/* <NavBar /> */}
-      <h2>Product contenuto:</h2>;
+      <h2>Product contenuto:</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
         consectetur fuga maxime sint incidunt dolore asperiores quos quod? Et

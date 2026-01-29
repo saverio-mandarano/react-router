@@ -6,11 +6,16 @@ import NavBar from "../NavBar";
 
 export default function DefaultLayout() {
   return (
-    <div>
+    <>
       <header>
         <NavBar />
       </header>
-      <Outlet />
-    </div>
+
+      <main>
+        <div className="container">
+          <Outlet />
+        </div>
+      </main>
+    </>
   );
 }
