@@ -9,11 +9,13 @@ function NavBar() {
   ];
 
   return (
-    <nav>
-      <ul>
+    <nav className="navbar bg-dark">
+      <ul className="navbar-nav mx-auto">
         {links.map((link, i) => (
-          <li key={i}>
-            <NavLink to={link.path}>{link.label}</NavLink>
+          <li className="nav-item" key={i}>
+            <NavLink to={link.path} className="nav-link text-light">
+              {link.label}
+            </NavLink>
           </li>
         ))}
         {/* <li>

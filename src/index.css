@@ -3,3 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Navbar */
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
