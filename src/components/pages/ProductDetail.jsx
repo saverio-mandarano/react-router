@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 //utilizzo hook useEffect per gestione chiamata
 import { useEffect, useState } from "react";
 import axios from "axios";
+import ProductDetailCard from "../ProductDetailCard";
 
 const endpointBase = "https://fakestoreapi.com/products/";
 
@@ -28,9 +29,12 @@ export default function ProductDetail() {
 
   return (
     <>
-      <p>quì il dettaglio prodotto</p>
-      <div>
-        <h1>ID prodotto: {id}</h1>
+      <h1>Dettaglio del prodotto con ID: {id}</h1>
+      <div className="container">
+        <h6>product details fetched from fakestoreapi</h6>
+        <div className="card-container">
+          <ProductDetailCard />
+        </div>
       </div>
     </>
   );
