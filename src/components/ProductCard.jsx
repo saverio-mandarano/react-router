@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ProductCard({ productProp }) {
   return (
     <div className="card">
@@ -13,6 +15,7 @@ function ProductCard({ productProp }) {
         </p>
         <p className="product-description">{productProp.description}</p>
       </div>
+      <Link to={"/prodotti/2"}>Vedi dettagli</Link>
     </div>
   );
 }
