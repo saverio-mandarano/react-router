@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./components/pages/HomePage";
 import AboutUs from "./components/pages/AboutUs";
 import Product from "./components/pages/Product";
+import ProductDetail from "./components/pages/ProductDetail";
 
 //import del layout di riferimento
 import DefaultLayout from "./components/layouts/DefaultLayout";
@@ -15,8 +16,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<DefaultLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/prodotti" element={<Product />} />
+            <Route index element={<HomePage />} />
+            <Route path="/prodotti">
+              <Route index element={<Product />} />
+              <Route path=":id" element={<ProductDetail />} />
+            </Route>
             <Route path="/chisiamo" element={<AboutUs />} />
           </Route>
         </Routes>
