@@ -33,7 +33,7 @@ export default function ProductDetail() {
       <div className="container">
         <h6>product details fetched from fakestoreapi</h6>
         <div className="card-container">
-          <ProductDetailCard />
+          <ProductDetailCard productInfoProp={productInfo} />
         </div>
       </div>
     </>
