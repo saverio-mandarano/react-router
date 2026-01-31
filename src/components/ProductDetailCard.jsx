@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function ProductDetailCard({ productInfoProp }) {
   return (
     <>
@@ -35,6 +37,10 @@ function ProductDetailCard({ productInfoProp }) {
             </div>
           </div>
         </div>
+
+        <Link to="/prodotti" className="btn btn-primary">
+          Back to Products List
+        </Link>
       </div>
     </>
   );
