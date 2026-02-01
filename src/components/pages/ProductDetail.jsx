@@ -20,6 +20,19 @@ export default function ProductDetail() {
   //var di stato per gestire loading di dettaglio prodotto
   const [isLoading, setIsLoading] = useState(true);
 
+  //transformo id da stringa a numero
+  const numberId = Number(id);
+
+  //funzione per navigare al prodotto precedente
+  function prevProduct() {
+    navigate(`/prodotti/${numberId - 1}`);
+  }
+
+  //funzione per navigare al prodotto successivo
+  function nextProduct() {
+    navigate(`/prodotti/${numberId + 1}`);
+  }
+
   //funzione che fa chiamata Ajax per fetch dati usando l'id
   function fetchProductInfo() {
     setIsLoading(true);
@@ -43,7 +56,7 @@ export default function ProductDetail() {
 
   useEffect(() => {
     fetchProductInfo();
-  }, []);
+  }, [id]);
 
   if (isLoading) {
     return <p>loading...</p>;
@@ -52,6 +65,21 @@ export default function ProductDetail() {
   return (
     <>
       <h1>Dettaglio del prodotto con ID: {id}</h1>
+
+      <div className="d-flex gap-2 my-3">
+        <button
+          onClick={prevProduct}
+          disabled={numberId <= 1}
+          className="btn btn-primary"
+        >
+          Precedente
+        </button>
+
+        <button onClick={nextProduct} className="btn btn-primary">
+          Prossimo
+        </button>
+      </div>
+
       <div className="container">
         <h6>product details fetched from fakestoreapi</h6>
         <div className="card-container">
