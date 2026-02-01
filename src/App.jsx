@@ -6,6 +6,7 @@ import HomePage from "./components/pages/HomePage";
 import AboutUs from "./components/pages/AboutUs";
 import Product from "./components/pages/Product";
 import ProductDetail from "./components/pages/ProductDetail";
+import NotFoundPage from "./components/pages/NotFoundPage";
 
 //import del layout di riferimento
 import DefaultLayout from "./components/layouts/DefaultLayout";
@@ -23,6 +24,7 @@ function App() {
             </Route>
             <Route path="/chisiamo" element={<AboutUs />} />
           </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
     </>
