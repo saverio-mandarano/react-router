@@ -17,8 +17,12 @@ export default function ProductDetail() {
   //eseguo useNavigate per aver un elemento navigate da utilizzare
   const navigate = useNavigate();
 
+  //var di stato per gestire loading di dettaglio prodotto
+  const [isLoading, setIsLoading] = useState(true);
+
   //funzione che fa chiamata Ajax per fetch dati usando l'id
   function fetchProductInfo() {
+    setIsLoading(true);
     axios
       .get(`${endpointBase}${id}`)
       .then((res) => {
@@ -31,12 +35,19 @@ export default function ProductDetail() {
         console.log(`errore nella richiesta end.API`, err);
         navigate("/prodotti"); //Se c'è errore, o il prodotto non esiste (throw sopra), reindirizzamento alla pagina listato
       })
-      .finally(() => console.log(`end call`));
+      .finally(() => {
+        setIsLoading(false);
+        console.log(`end call`);
+      });
   }
 
   useEffect(() => {
     fetchProductInfo();
-  }, [id]);
+  }, []);
+
+  if (isLoading) {
+    return <p>loading...</p>;
+  }
 
   return (
     <>
